@@ -1,0 +1,28 @@
+/* การเข้าถึงแบบ universal */
+* {
+    box-sizing: border-box; 
+}
+/* เป็นการใช้ properties ให้กับ Element ทุกตัว */
+
+.icon-bar {
+  /* width: 90px; */
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+.icon-bar a {
+  display: block;
+  width: 20%;
+  float: left;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+.icon-bar a:hover {
+  background-color: #000;
+}
+.active {
+  background-color: #04aa6d;
+}
