@@ -1,62 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Calculator</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
-        }
-        .calculator {
-            width: 300px;
-            margin: 0 auto;
-            background-color:mediumaquamarine;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .input-field {
-            width: 90%;
-            padding: 10px;
-            font-size: 16px;
-            text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin: auto;
-        }
-        .result {
-            font-size: 24px;
-            font-weight: bold;
-            color: bisque;
-            font-style: oblique;
-        }
-        button {
-            border-radius: 10px;
-            border-color: bisque;
-            font-size: 20px;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        text-align: center;
+      }
+      .calculator {
+        width: 300px;
+        margin: 0 auto;
+        background-color: mediumaquamarine;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .input-field {
+        width: 90%;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: auto;
+      }
+      .result {
+        font-size: 24px;
+        font-weight: bold;
+        color: bisque;
+        font-style: oblique;
+      }
+      button {
+        border-radius: 10px;
+        border-color: bisque;
+        font-size: 20px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="calculator">
-        <input type="text" id="inputField" class="input-field" placeholder="Enter expression (e.g., 2+3)">
-        <button onclick="calculate()">Calculate</button>
-        <div class="result" id="result"></div>
+      <input
+        type="text"
+        id="inputField"
+        class="input-field"
+        placeholder="Enter expression (e.g., 2+3)"
+      />
+      <button onclick="calculate()">Calculate</button>
+      <div class="result" id="result"></div>
     </div>
 
     <script>
-        function calculate() {
-            const input = document.getElementById('inputField').value;
-            try {
-                const result = eval(input);
-                document.getElementById('result').textContent = `Result: ${result}`;
-            } catch (error) {
-                document.getElementById('result').textContent = 'Invalid expression';
-            }
+      function calculate() {
+        const input = document.getElementById("inputField").value;
+        try {
+          const result = eval(input);
+          document.getElementById("result").textContent = `Result: ${result}`;
+        } catch (error) {
+          document.getElementById("result").textContent = "Invalid expression";
         }
+      }
     </script>
-</body>
+  </body>
 </html>
